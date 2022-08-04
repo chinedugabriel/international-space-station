@@ -50,5 +50,5 @@ let getISS = async ()=>{// this function gets the data and converts it into a us
 
 // calls the function
 // getISS();
-setInterval(getISS,1000)
+setInterval(getISS,1000);
 
