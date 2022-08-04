@@ -16,7 +16,7 @@ const marker = L.marker([0, 0], {icon: myIcon}).addTo(map);
 //     attribution: '© OpenStreetMap'
 // }).addTo(map);
 
-// this specifies the tiles which represnt the map images that's displayed
+// this specifies the tiles which represent the map images that's displayed
 const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 
@@ -42,11 +42,9 @@ let getISS = async ()=>{// this function gets the data and converts it into a us
     lat.innerHTML = latitude.toFixed(2) +" lat";
 
     // L.marker([50.5, 30.5]).addTo(map);
+    map.setView([latitude, longitude], 1.5);
     marker.setLatLng([latitude, longitude]);
-    if(firstTime){
-        map.setView([latitude, longitude], 1.5);
-        firstTime = false;
-    }
+
 
 };
 
